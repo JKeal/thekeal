@@ -1,0 +1,36 @@
+/// This is the place for all the styling that relates to component 1 and nothing else
+
+body {
+    font-family: 'Lora', serif;
+    color: $bodytext;
+//    $linktext
+    @extend %container;
+}
+
+.homePage {
+    font-size: 3em;
+}
+
+a {
+    color: $bodytext;
+    text-decoration: none;
+    position: relative;
+//    text-shadow: 1px 0 0 white,
+//                0 -1px 0 white,
+//                -1px 0 0 white;
+    
+    text-shadow: 2px 0 0 white, 4px 0 0 white,
+                0 -3px 0 white, 0 -6px 0 white,
+                -2px 0 0 white, -4px 0 0 white;
+    z-index: 2;
+//    border-bottom: 1px solid $nearBlack;
+    &:before {
+        content: "";
+        background-color: $bodytext;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 6px;
+        z-index: -1;
+    }
+}
